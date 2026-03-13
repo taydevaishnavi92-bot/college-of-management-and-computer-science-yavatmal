@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | CMCS Yavatmal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header (Consistent Navigation) -->
+    <header>
+        <div class="logo"><h1>College of Management & <br>Computer Science</h1></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="department.html">Departments</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="section-title">Get in Touch</h1>
+        <p style="color: var(--text-dim); margin-bottom: 40px; max-width: 600px;">
+            Have questions about admissions, courses, or campus life? Visit our campus or send us a message below.
+        </p>
+
+        <div class="contact-grid">
+            
+            
+
+        <div class="card contact-form-card">
+    <!-- This sends the data to Web3Forms -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <!-- 1. YOUR ACCESS KEY GOES HERE -->
+        <input type="hidden" name="access_key" value="32254965-7707-48ef-a841-9455171f50e3">
+
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" class="form-input" placeholder="John Doe" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" class="form-input" placeholder="student@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label>Subject</label>
+            <select name="subject" class="form-input">
+                <option>Admission Enquiry</option>
+                <option>Fee Structure</option>
+                <option>Campus Visit</option>
+                <option>Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" class="form-input" rows="5" placeholder="How can we help you?"></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+</div>
+</div>
+            <!-- Right Column: Info & Map -->
+            <div class="contact-info-wrapper">
+                
+                <!-- Direct Contact Details -->
+                <div class="card" style="margin-bottom: 30px;">
+                    <h3 style="margin-bottom: 20px; color: var(--accent-blue);">Contact Details</h3>
+                    
+                    <div class="info-item">
+                        <strong style="color: white;">📍 Address:</strong>
+                        <p>13/4 (A), Behind Naringe Nagar,<br>Dhamangaon Road,<br>Yavatmal - 445001, Maharashtra.</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <strong style="color: white;">📞 Phone:</strong>
+                        <p>+91 94231 31946<br>07232 - 255552</p>
+                    </div>
+
+                    <div class="info-item">
+                        <strong style="color: white;">✉️ Email:</strong>
+                        <p>cmcs457@sgbau.ac.in</p>
+                    </div>
+                </div>
+
+                <!-- Google Map Embed -->
+                <div class="map-container" style="border-radius: 12px; overflow: hidden; border: 1px solid #333;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.2968107103025!2d78.13847161487293!3d20.411863486335847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd3e8afbdf005b9%3A0x93664da6142c96fc!2z4KSV4KWJ4KSy4KWH4KScIOCkkeCkqyDgpK7gpYXgpKjgpYfgpJzgpK7gpYfgpILgpJ8g4KSG4KSj4KS_IOCkleClieCkruCljeCkquCljeCkr-ClgeCkn-CksCDgpLjgpL7gpK_gpKjgpY3gpLgtIOCkoeCkv-CkquCkvuCksOCljeCkn-CkruClh-CkguCknyDgpJHgpKsg4KSu4KWF4KSo4KWH4KSc4KSu4KWH4KSC4KSf!5e0!3m2!1smr!2sin!4v1616174494121!5m2!1smr!2sin" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 CMCS Yavatmal. All Rights Reserved.</p>
+    </footer>
+    <div id="messagePopup" class="popup-overlay">
+    <div class="popup-content">
+        <div class="success-icon">✓</div>
+        <h2>Thank You!</h2>
+        <p>Your message has been sent successfully. We will contact you soon.</p>
+        <button type="button" class="close-btn" onclick="closePopup()">Close</button>
+    </div>
+</div>
+
+<style>
+    .popup-overlay {
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 10000;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+    }
+
+    .popup-content {
+        background: #1a1a1a;
+        padding: 40px;
+        border-radius: 15px;
+        text-align: center;
+        border: 1px solid #00a8e8;
+        max-width: 400px;
+        width: 90%;
+        color: white;
+        box-shadow: 0 10px 30px rgba(0, 168, 232, 0.3);
+    }
+
+    .success-icon {
+        font-size: 60px;
+        color: #00a8e8;
+        margin-bottom: 15px;
+    }
+
+    .close-btn {
+        margin-top: 20px;
+        padding: 10px 30px;
+        background: #00a8e8;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .close-btn:hover {
+        background: #007bb5;
+    }
+</style>
+
+<script>
+    const contactForm = document.getElementById('contactForm');
+    const popup = document.getElementById('messagePopup');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            // Stops the page from refreshing/crashing
+            e.preventDefault(); 
+            
+            // Shows the popup
+            popup.style.display = 'flex';
+            
+            // Clears the form fields
+            contactForm.reset();
+        });
+    }
+
+    function closePopup() {
+        popup.style.display = 'none';
+    }
+</script>
+<button type="submit" class="btn-submit">Send Message</button>
+
+</body>
+</html>
+
+</body>
+</html>
